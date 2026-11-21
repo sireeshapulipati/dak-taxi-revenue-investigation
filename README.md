@@ -2,7 +2,7 @@
 
 An agent investigates why Chicago taxi revenue fell between 2019 and 2023. It works across three data sources, using Google Cloud's Data Agent Kit (DAK) in Antigravity IDE and a custom skill that tells it how to run the investigation.
 
-This repo goes with the Towards Data Science article "I Let a Data Agent Investigate a Taxi Revenue Drop" (link coming once it's published).
+This repo goes with the Towards Data Science article "I Let a Data Agent Dig Into Chicago's Taxi Revenue Decline" (link coming once it's published).
 
 ## What the agent does
 
