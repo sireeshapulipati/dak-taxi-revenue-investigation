@@ -51,7 +51,7 @@ def main():
     print("Loading data...")
     
     # Initialize BigQuery Client
-    client = bigquery.Client(project='dak-demo')
+    client = bigquery.Client(project='YOUR_PROJECT_ID')
     
     # 1. Driver Profiles (Cloud SQL)
     df_drivers = load_cloudsql_data('/Users/sireesha/.gemini/antigravity-ide/brain/35aacad3-54d6-4a4a-83a1-8027b8763898/.system_generated/steps/112/output.txt')
@@ -77,7 +77,7 @@ def main():
           count(1) as trip_count,
           sum(fare) as total_fare,
           sum(trip_total) as total_revenue
-        FROM `dak-demo.chicago_taxi_trips.taxi_trips`
+        FROM `YOUR_PROJECT_ID.chicago_taxi_trips.taxi_trips`
         WHERE taxi_id IN ({ids_str})
           AND EXTRACT(YEAR FROM trip_start_timestamp) BETWEEN 2019 AND 2023
         GROUP BY 1
