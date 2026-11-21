@@ -6,12 +6,13 @@
 - Dataset: `noaa_gsod` — daily weather data; use O'Hare airport station
 
 ## Cloud SQL PostgreSQL
-- Instance: `<free-trial-dak-demo>` 
-- Database: `<taxi_data>`
-- Contains operational driver data
-(Replace with your own instance and database names)
+- Instance: `YOUR_INSTANCE` 
+- Database: `YOUR_DATABASE`
+- Table: `driver_profiles` — operational driver data 
+
+Replace the instance and database names with your own.
 
 ## Local CSV
-- Path: `./.data/rideshare_trips_by_month.csv`
+- Path: `.agent/data/rideshare_trips_by_month.csv`
 - Monthly TNP rideshare trip volumes by community area
 - Source: City of Chicago Data Portal

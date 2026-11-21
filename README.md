@@ -15,7 +15,7 @@ Given one business question, the agent pulls from three places and joins what it
 | Cloud SQL for PostgreSQL | Synthetic driver profiles (Bronze, Silver and Gold tiers) |
 | Local CSV | Monthly rideshare trip counts |
 
-It writes a `findings_report.md` and a `charts/` folder. The versions from my run are in the repo as a reference, so you can compare them with yours.
+It writes a `findings_report.md` and a `charts/` folder. The versions from my run are in `sample-output/`, so you can compare them with yours.
 
 ## What's in the repo
 
@@ -29,18 +29,19 @@ It writes a `findings_report.md` and a `charts/` folder. The versions from my ru
 │   │           └── data_sources.md
 │   └── data/
 │       └── rideshare_trips_by_month.csv
-├── charts/
+├── sample-output/
+│   ├── charts/
+│   ├── findings_report.md
+│   └── investigate.py
 ├── driver_profiles.csv
-├── findings_report.md
-├── investigate.py
 └── README.md
 ```
 
-The `.agent` folder is the only part you copy into your own project. Everything else in the repo is reference material or setup data.
+The `.agent` folder is the only part you copy into your own project. `sample-output/` holds what the agent produced during my run, for comparison. Your run will produce similar files, but not identical ones. `driver_profiles.csv` is setup data.
 
 `SKILL.md` is the custom skill. It sets the method and the output format and puts guardrails on the agent, such as read-only queries and no raw driver IDs in the output. `references/data_sources.md` lists the project, instance and table details the skill reads.
 
-`investigate.py` is the script the agent wrote during my run. It's here for reference only, and you don't run it. The skill doesn't contain a script, so your agent will write its own.
+`sample-output/investigate.py` is the script the agent wrote during my run. It's here for reference only, and you don't run it. The skill doesn't contain a script, so your agent will write its own.
 
 `driver_profiles.csv` holds the synthetic driver profiles. You import it into Cloud SQL (see below), and the agent reads it from there.
 
@@ -50,7 +51,6 @@ The `.agent` folder is the only part you copy into your own project. Everything 
 - A Cloud SQL for PostgreSQL instance with a database for the driver profiles
 - Antigravity IDE (Claude Code or Codex also work with DAK)
 - Data Agent Kit installed, with only the MCP servers this task uses turned on. I enabled BigQuery, Cloud SQL and the Knowledge Catalog. Keeping the list short keeps the agent's context small.
-- DAK's `notebook-guidance` and `managing-python-dependencies` skills
 
 ## Setup
 
@@ -156,3 +156,8 @@ The tier breakdown shows Bronze, Silver and Gold all dropping, but those profile
 - The skill only allows SELECT queries.
 - It tells the agent not to print raw `taxi_id` values in its output, which keeps the report readable.
 
+## License
+
+This repo is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You can share and adapt it, including for commercial use, as long as you give credit.
+
+The Chicago taxi trips and NOAA weather data come from public datasets and keep their own terms. The rideshare CSV comes from the City of Chicago Data Portal. The driver profiles are synthetic.
