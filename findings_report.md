@@ -1,7 +1,7 @@
 # Chicago Taxi Revenue Decline Investigation (2019-2023)
 
 ## 1. Executive Summary
-Between 2019 and 2023, Chicago taxi revenue experienced a severe decline, dropping by **45.0%** from **$326.7M** to **$179.9M**. This decline was primarily driven by intense rideshare (TNP) competition, which captured a significant share of the market, particularly in high-volume airport and downtown corridors. Every driver tier (Bronze, Silver, Gold) and all major geographic zones saw significant drops in revenue.
+Between 2019 and 2023, Chicago taxi revenue experienced a severe decline, dropping by **45.0%** from **$326.7M** to **$179.9M**. This decline was primarily driven by intense rideshare (TNP) competition, which captured a significant share of the market, particularly in downtown corridors. Every driver tier (Bronze, Silver, Gold) and all major geographic zones saw significant drops in revenue.
 
 ## 2. Root Cause Finding
 The primary root cause of the taxi revenue decline is **intense rideshare competition (TNP)** rather than weather conditions or fleet downsizing alone. 
@@ -20,25 +20,25 @@ All driver tiers experienced severe revenue declines, but **Bronze** and **Silve
 | **Gold** | 1106 | 675 | -39.0% | $67.33M | $35.87M | -46.7% | $60875 | $53136 | -12.7% |
 
 Key Findings:
-- **Bronze Tier** suffered the largest total revenue loss (**$56.3M** decline).
-- **Gold Tier** active driver counts shrunk by **39.0%** (from 1106 to 675), indicating that elite drivers left the industry at a faster rate than Bronze/Silver drivers, and their average revenue per driver fell by **12.7%**.
+- **Silver Tier** suffered the largest total revenue loss (**$59.1M** decline), just ahead of Bronze (**$56.3M**).
+- **Gold Tier** had the steepest drop in average revenue per driver (**12.7%**), and its active driver count shrunk by **39.0%** (from 1106 to 675). Silver lost the largest share of its active drivers (**41.2%**).
 
 ### 3.2 Geographic Zones Most Affected
-Geographically, the decline was heavily concentrated in the airport and business center hubs.
+Geographically, the decline was concentrated in the downtown core.
 
 **Top 5 Zones by Absolute Revenue Loss:**
 1. **Loop (Zone 32):** Lost **$43.1M** (declined from $61.4M to $18.3M, **-70.2%**)
 2. **Near North Side (Zone 8):** Lost **$42.7M** (declined from $66.5M to $23.8M, **-64.2%**)
-3. **Unknown (Zone nan):** Lost **$19.3M** (declined from $28.5M to $9.2M, **-67.8%**)
+3. **Unknown (no community area):** Lost **$19.3M** (declined from $28.5M to $9.2M, **-67.8%**)
 4. **O'Hare (Zone 76):** Lost **$15.3M** (declined from $86.8M to $71.5M, **-17.6%**)
 5. **Near West Side (Zone 28):** Lost **$13.6M** (declined from $22.8M to $9.2M, **-59.6%**)
 
-*Note: Loop and Near North Side saw massive absolute revenue reductions because they represent the core tourism and business hubs. O'Hare Airport suffered a massive drop due to rideshares taking over airport pickup queues.*
+*Note: Loop and Near North Side saw the largest absolute revenue reductions. O'Hare lost less in percentage terms (-17.6%), so airport taxi demand held up better than downtown.*
 
 ## 4. Supporting Evidence
 
 - **Market Share Shift**: In 2019, Chicago saw **104.8M** rideshare trips vs **17.9M** taxi trips. In 2023, rideshare volume stayed high at **76.1M** while taxi trips fell to **6.5M**.
-- **Airport Competition**: At O'Hare (Zone 76), taxi trips plummeted from **1.69M** in 2019 to **1.33M** in 2023, while rideshare trips dominated at **3.74M**.
+- **Airport Competition**: At O'Hare (Zone 76), taxi trips fell from **1.69M** in 2019 to **1.33M** in 2023, while rideshare trips reached **3.74M**.
 
 ## 5. Charts
 - **Revenue decline by Driver Tier**: ![Revenue by Driver Tier](charts/revenue_by_driver_tier.png)
